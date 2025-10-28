@@ -11,6 +11,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+<style>
+  /* Keep intrinsic aspect ratio at all screen sizes */
+  .image > img {
+    display: block !important;
+    width: 100% !important;     /* fill the container’s width */
+    max-width: 100% !important; /* never overflow */
+    height: auto !important;    /* preserve aspect ratio */
+    image-rendering: auto !important;
+  }
+
+  /* If some CSS elsewhere forces BOTH width & height, prevent distortion */
+  .image > img {
+    object-fit: contain !important; /* letterbox if a fixed height is imposed */
+  }
+
+  /* Optional: tidy up the container */
+  .image {
+    max-width: 100% !important;
+    line-height: 0 !important;  /* remove inline-gap around images */
+    overflow: hidden;            /* avoid stray overflow if parents constrain height */
+  }
+</style>
+
 	</head>
 	<body class="is-preload">
 
